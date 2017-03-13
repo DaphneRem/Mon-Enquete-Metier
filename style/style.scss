@@ -1,0 +1,274 @@
+@import 'myGrid/myGrid';
+
+$button  : #F72D30;
+$gris  : #5C5C5C;
+
+body {
+        font-family     : 'Roboto', sans-serif;
+}
+
+.global {
+    height: 100vh;
+    width: 100%;
+
+}
+
+.menu {
+    margin         : 0;
+    background     : #F7F7F7;
+    width          : 100%;
+    min-height     : $unit * 8;
+    max-height     : $unit * 8;
+    box-shadow     : 0 2px 4px 0 rgba(0,0,0,0.30);
+    padding        : 0 $unit*3;
+    .logo {
+        height: $unit * 8;
+        img{
+            width         : $unit * 8;
+            height        : $unit * 8;
+        }
+        h1 {
+            font-family   : Brush Script MT,cursive;
+            max-height    : 100%;
+            font-size     : $unit * 4;
+            color         : $gris;
+        }
+    }
+    .part {
+            a {
+                width : 10%;
+                height: $unit *4;
+                .menu-liens {
+                    // margin : 5px;
+                    height : $unit * 4;
+                    width  : $unit * 4;
+                }
+            }
+        }
+
+}
+
+.titre {
+    height: 100px;
+    .soustitre {
+        // background-color: rgb(16, 196, 167, 0.9);
+        background-color: rgba(12, 76, 138, 0.9);
+        width : 100%;
+        #triangle-down {
+          width   : 0;
+          height  : 0;
+          border-left : 20px solid transparent;
+          border-right : 20px solid transparent;
+          border-top : 20px solid #F7F7F7;
+          margin : 0 60%;
+        }
+        h2 {
+            height: $unit * 7;
+            margin : 0;
+            padding: 5px;
+            font-weight: 900;
+            font-size  : $unit * 7;
+            color : rgba(255, 255, 255, 0.8);
+        }
+    }
+}
+
+
+
+.sub-header {
+    max-height: 100%;
+    background-image   : url('../img/background5.jpg');
+    z-index            : -1;
+    .button {
+        height : 70px;
+        .butt {
+            width: 250px;
+            button {
+                cursor:  pointer;
+                border     : 2px solid transparent;
+                outline    : none;
+                width: 100%;
+                height: 50px;
+                margin-top : $unit;
+                background-color: $button;
+                border-radius: 40px;
+                font-size: $unit * 2;
+                color :white;
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+                transition-duration: 0.4s;
+                &:hover {
+                    cursor:  pointer;
+                    width: 100%;
+                    height: 50px;
+                    margin-top : $unit;
+                    background-color: lighten($button, 12%);
+                    border-radius: 40px;
+                    font-size: $unit * 2;
+                    color :white;
+                    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+                    transition-duration: 0.4s;
+                }
+            }
+        }
+    }
+
+
+
+
+    // à travailler
+
+    .formulaire {
+        // max-height: 100%;
+        // min-height: 100%;
+        .pro , .enqueteur{
+            height: 450px;
+            max-height: 100%;
+            display            : flex;
+            flex-direction     : column;
+            align-items        : center; // centre verticalement
+            justify-content    : center;
+            text-align: justify;
+            .entourage {
+                width: 400px;
+                background: rgba(255, 255, 255, 0.7);
+                border-radius: 40px;
+                .intitule {
+                    height: 200px;
+                    h4 {
+                        width : 80%;
+                        height: 50px;
+                    }
+                    p {
+                        width : 80%;
+                        height: 50px;
+                    }
+                }
+                form {
+                    height: 200px;
+                    // display : flex;
+                    // justify-content: center;
+                    // flex-direction: column;
+                    // align-items: center;
+                    // justify-content: center;
+                    .renseigner {
+                        label {
+                            height: 0;
+                            width: 0;
+                        }
+                        input {
+                            margin : 3px;
+                        	background-color: white;
+                        	color : #CACCCA;
+                        	padding : 1em 10em 1em 1em;
+                        	border-color : #E8E8E8;
+                        	border-radius : 5px;
+                        	border : 0px;
+                        }
+                        input:active {
+                            margin : 3px;
+                        	background-color: white;
+                        	color : #CACCCA;
+                        	padding : 1em 10em 1em 1em;
+                        	border-color : #E8E8E8;
+                        	border-radius : 5px;
+                        	border : 0px;
+
+                        }
+                        .submit {
+                            cursor:  pointer;
+                        	background-color: $button;
+                        	color :white;
+                        	padding : 1em 2em 1em 2em;
+                        	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+                            transition-duration: 0.4s;
+                            border-radius: 40px;
+                            &:hover {
+                                cursor:  pointer;
+                                margin-top : $unit;
+                            	background-color: lighten($button, 12%);
+                            	color :white;
+                            	padding : 1em 2em 1em 2em;
+                            	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+                                transition-duration: 0.4s;
+                                border-radius: 40px;
+                            }
+                        }
+                    }
+                    .response {
+                        height: 0;
+                        width: 0;
+                    }
+
+                }
+            }
+        }
+    }
+    .section {
+        display: flex;
+        align-self: flex-end;
+        align-items: center;
+        justify-content: space-around;
+        width : 100%;
+        height: 70px;
+        background: rgba(92, 92, 92, 0.6);
+        color :rgba(255, 255, 255, 0.8);
+        .fleche {
+            color :rgba(255, 255, 255, 0.8);
+        }
+        img {
+            height : 70px;
+            width: 70px;
+        }
+    }
+}
+.footer {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background: white;
+    color : $gris;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        font-size: $unit * 3;
+    }
+
+}
+
+.menu-mobile {
+    display: none;
+}
+.liens {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .menu {
+        .part {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .titre {
+        height: 230px;
+        .soustitre {
+            #triangle-down {
+              margin : 0 45%;
+            }
+        }
+    }
+    .sub-header {
+        height : 1000px;
+        .formulaire {
+            .pro , .enqueteur{
+                .entourage {
+                    width: 330px;
+                }
+            }
+        }
+    }
+}
